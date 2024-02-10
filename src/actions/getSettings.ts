@@ -3,7 +3,7 @@ import { env } from '@/config'
 const fs = require('fs')
 const sqlite3 = require('sqlite3').verbose()
 const db = new sqlite3.Database(env.DB)
-import { closeDbConnection, settingsTableType, settingsType } from '.'
+import { closeDbConnection, settingsTableType } from '.'
 
 const getData = () => {
 	return new Promise((resolve, reject) => {

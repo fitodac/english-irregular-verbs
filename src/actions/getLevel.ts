@@ -3,13 +3,7 @@ import { env } from '@/config'
 const fs = require('fs')
 const sqlite3 = require('sqlite3').verbose()
 const db = new sqlite3.Database(env.DB)
-import {
-	closeDbConnection,
-	levelType,
-	modeType,
-	getTranslations,
-	getTranslationsByWords,
-} from '.'
+import { closeDbConnection, getTranslations, getTranslationsByWords } from '.'
 
 const getData = (id: number) => {
 	if (!id) return
@@ -73,7 +67,7 @@ export const getLevels = (game_id: number) => {
 
 export const getLevel = async (id: number) => {
 	try {
-		const data = (await getData(id)) as levelType
+		const data = (await getData(id)) as [levelType]
 
 		const game_mode = (await getGameMode({
 			mode: data[0].pairs_id !== 'null' ? 'pairs' : 'sentences',
@@ -81,7 +75,7 @@ export const getLevel = async (id: number) => {
 				data[0].pairs_id !== 'null'
 					? parseInt(data[0].pairs_id)
 					: parseInt(data[0].sentences_id),
-		})) as modeType
+		})) as [modeType]
 
 		if (data[0].pairs_id !== 'null') {
 			const ids = game_mode[0].options?.split('|').map((e: string) => Number(e))

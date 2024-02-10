@@ -3,7 +3,7 @@ import { env } from '@/config'
 const fs = require('fs')
 const sqlite3 = require('sqlite3').verbose()
 const db = new sqlite3.Database(env.DB)
-import { getLevels, closeDbConnection, gameType, levelType } from '.'
+import { getLevels, closeDbConnection } from '.'
 
 const getData = (id: number) => {
 	if (!id) return
