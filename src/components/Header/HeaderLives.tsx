@@ -1,4 +1,4 @@
-import { getSettings, settingsType } from '@/actions'
+import { getSettings } from '@/actions'
 
 export const HeaderLives = async () => {
 	const { lives } = (await getSettings()) as settingsType

@@ -1,19 +1,12 @@
 'use client'
 import { useEffect, useState } from 'react'
-import { levelModelType, translationType } from '..'
 import { Button } from '@nextui-org/react'
 import { checkSentenceOption } from '../actions/checkSentenceOption'
 import { setSentencesOrders } from '../actions'
-import { substractLife } from '@/actions'
+import { substractLife, nextLevel } from '@/actions'
 
-export const SentencesGameboard = ({
-	data,
-	level,
-}: {
-	data: levelModelType
-	level: number
-}) => {
-	const sentence = data?.game_mode.sentence
+export const SentencesGameboard = ({ data }: { data: getLevelType }) => {
+	const sentence = data.game_mode?.sentence
 		? data.game_mode.sentence.replace(/%/g, '_____')
 		: ''
 
@@ -22,7 +15,7 @@ export const SentencesGameboard = ({
 	const [optionError, setOptionError] = useState(null) as any
 
 	useEffect(() => {
-		if (data?.game_mode?.options?.length) {
+		if (data.game_mode?.options?.length) {
 			setOptions(
 				setSentencesOrders([...data.game_mode.options])
 			) as translationType
@@ -34,23 +27,21 @@ export const SentencesGameboard = ({
 		const option = options.filter((e: translationType) => e.id === id)[0]
 
 		const check =
-			data.game_mode.word_id &&
+			data.game_mode?.word_id &&
 			((await checkSentenceOption(data.game_mode.word_id)) as translationType)
 
 		const sentenceEl = document.getElementById('sentence')
 
 		if (check) {
 			if (option.word === check.word) {
-				if (sentenceEl && data.game_mode.sentence) {
+				if (sentenceEl && data.game_mode?.sentence) {
 					sentenceEl.innerHTML = data.game_mode.sentence.replace(
 						/%/g,
 						`<span class="text-warning font-semibold">${option.word}</span>`
 					)
-				}
 
-				setTimeout(() => {
-					// setLevel()
-				}, 800)
+					setTimeout(() => nextLevel(), 800)
+				}
 			} else {
 				setOptionError(id)
 				substractLife()
@@ -58,7 +49,7 @@ export const SentencesGameboard = ({
 				setTimeout(() => {
 					setOptionError(null)
 					setSelected(null)
-				}, 800)
+				}, 600)
 			}
 		}
 	}

@@ -1,30 +1,28 @@
-import { translationWordType, translationTranslationType } from '.'
-import { usePairs } from './hooks'
 import { cookies } from 'next/headers'
 import { PairsGameboard as Gameboard } from './components/PairsGameboard'
+import { env } from '@/config'
+import { setPairsOrder } from './actions'
 
 export const GamePairs = async () => {
-	const { words, translations } = (await usePairs()) as {
+	// Level
+	const levelID = cookies().get('irregularVerbsLevel') as
+		| RequestCookie
+		| undefined
+	const getLevel = await fetch(`${env.API_PATH}/level?id=${levelID?.value}`)
+	const { game_mode } = await getLevel.json()
+
+	const { words, translations } = setPairsOrder(game_mode.options) as {
 		words: [translationWordType]
 		translations: [translationTranslationType]
 	}
-
-	const cookieLevel = cookies().get('irregularVerbsLevel') as
-		| RequestCookie
-		| undefined
 
 	return (
 		<>
 			<Gameboard
 				words={words}
 				translations={translations}
-				level={Number(cookieLevel?.value)}
+				level={Number(levelID?.value)}
 			/>
-
-			{/* {data.game_mode} */}
-
-			{/* <pre>{JSON.stringify(data, null, 2)}</pre> */}
-			{/* <pre>{JSON.stringify(selected, null, 2)}</pre> */}
 		</>
 	)
 }

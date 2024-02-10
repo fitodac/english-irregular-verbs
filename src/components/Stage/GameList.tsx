@@ -10,8 +10,7 @@ export const GameList = ({ games }: { games: gameType }) => {
 
 	return (
 		<>
-			{/* <pre>{game}</pre> */}
-			<div className="grid grid-cols-2 gap-8 mt-6">
+			<div className="grid grid-cols-2 gap-6 mt-6">
 				{games.map(({ id, name, cleared }) => (
 					<div key={`game-${id}`}>
 						<Button

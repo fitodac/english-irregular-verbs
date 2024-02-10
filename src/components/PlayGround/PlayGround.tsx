@@ -1,49 +1,40 @@
-import { getGame, getLevel } from '@/actions'
 import { cookies } from 'next/headers'
-import {
-	gameType,
-	levelType,
-	levelModelType,
-	GamePairs,
-	GameCompleteSentences,
-} from '.'
+import { GamePairs, GameCompleteSentences } from '.'
+import { env } from '@/config'
 
 export const PlayGround = async () => {
-	// Game
-	// const cookieGame = cookies().get('irregularVerbsGame') as
-	// 	| RequestCookie
-	// 	| undefined
-	// const game =
-	// 	cookieGame && ((await getGame(Number(cookieGame.value))) as gameType)
-
-	// Level
-	const cookieLevel = cookies().get('irregularVerbsLevel') as
+	const gameID = cookies().get('irregularVerbsGame') as
 		| RequestCookie
 		| undefined
-	// const level =
-	// 	cookieLevel &&
-	// 	(game?.levels.filter(
-	// 		(l) => l.idx === parseInt(cookieLevel.value)
-	// 	)[0] as levelType)
 
-	const data =
-		cookieLevel &&
-		((await getLevel(Number(cookieLevel.value))) as levelModelType)
+	const getGame = await fetch(`${env.API_PATH}/game?id=${gameID?.value}`)
+	const { game } = await getGame.json()
+
+	// Level
+	const levelID = cookies().get('irregularVerbsLevel') as
+		| RequestCookie
+		| undefined
+	const getLevel = await fetch(`${env.API_PATH}/level?id=${levelID?.value}`)
+	const { level } = await getLevel.json()
 
 	return (
 		<>
-			<div className="font-bold">Level {data?.level.idx}</div>
+			{level ? (
+				game.levels.length ? (
+					<>
+						{level && <div className="font-bold">Level {level.idx}</div>}
 
-			{data?.level.pairs_id !== 'null' && <GamePairs />}
-			{data?.level.sentences_id !== 'null' && <GameCompleteSentences />}
-
-			<div className="space-y-5 mt-10">
-				{/* <pre>{JSON.stringify(cookieGame, null, 2)}</pre> */}
-				{/* <pre>{JSON.stringify(cookieLevel, null, 2)}</pre> */}
-				{/* <pre>{JSON.stringify(data, null, 2)}</pre> */}
-				{/* <pre>{JSON.stringify(level, null, 2)}</pre> */}
-				{/* <pre>{JSON.stringify(game, null, 2)}</pre> */}
-			</div>
+						{level.pairs_id !== 'null' && <GamePairs />}
+						{level.sentences_id !== 'null' && <GameCompleteSentences />}
+					</>
+				) : (
+					<div className="text-red-500 font-semibold text-center py-10">
+						Este nivel aún no tiene juegos
+					</div>
+				)
+			) : (
+				<div>Se completaron todos los niveles 🤘</div>
+			)}
 		</>
 	)
 }

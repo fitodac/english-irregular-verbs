@@ -1,11 +1,14 @@
-import { getStage, getSettings, settingsType } from '@/actions'
 import { GameList } from '.'
+import { env } from '@/config'
 
 export const Stage = async () => {
-	const { stage: stageID } = (await getSettings()) as settingsType
-	const { stage, games } = (await getStage(
-		parseInt(stageID)
-	)) as stageScreenType
+	const getSettings = await fetch(`${env.API_PATH}/settings`)
+	const {
+		settings: { stage: stageID },
+	} = await getSettings.json()
+
+	const getStage = await fetch(`${env.API_PATH}/stage?id=${stageID}`)
+	const { stage, games } = await getStage.json()
 
 	return (
 		<>
@@ -16,8 +19,6 @@ export const Stage = async () => {
 
 				<GameList games={games} />
 			</section>
-
-			{/* <pre>{JSON.stringify(games, null, 2)}</pre> */}
 		</>
 	)
 }
