@@ -69,26 +69,32 @@ export const getLevel = async (id: number) => {
 	try {
 		const data = (await getData(id)) as [levelType]
 
-		const game_mode = (await getGameMode({
-			mode: data[0].pairs_id !== 'null' ? 'pairs' : 'sentences',
-			id:
-				data[0].pairs_id !== 'null'
-					? parseInt(data[0].pairs_id)
-					: parseInt(data[0].sentences_id),
-		})) as [modeType]
+		let game_mode: [any] = [{}]
 
-		if (data[0].pairs_id !== 'null') {
-			const ids = game_mode[0].options?.split('|').map((e: string) => Number(e))
-			const translations = await getTranslations(ids)
-			game_mode[0].options = translations
-		}
+		if (data.length) {
+			game_mode = (await getGameMode({
+				mode: data[0].pairs_id !== 'null' ? 'pairs' : 'sentences',
+				id:
+					data[0].pairs_id !== 'null'
+						? parseInt(data[0].pairs_id)
+						: parseInt(data[0].sentences_id),
+			})) as [modeType]
 
-		if (data[0].sentences_id !== 'null') {
-			const words = `(${game_mode[0].options
-				?.split('|')
-				.map((e: string) => `'${e}'`)})`
-			const translations = await getTranslationsByWords(words)
-			game_mode[0].options = translations
+			if (data[0].pairs_id !== 'null') {
+				const ids = game_mode[0].options
+					?.split('|')
+					.map((e: string) => Number(e))
+				const translations = await getTranslations(ids)
+				game_mode[0].options = translations
+			}
+
+			if (data[0].sentences_id !== 'null') {
+				const words = `(${game_mode[0].options
+					?.split('|')
+					.map((e: string) => `'${e}'`)})`
+				const translations = await getTranslationsByWords(words)
+				game_mode[0].options = translations
+			}
 		}
 
 		return {

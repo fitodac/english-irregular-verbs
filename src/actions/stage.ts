@@ -26,6 +26,25 @@ const getData = (idx: number) => {
 }
 
 export const getStage = async (idx: number) => {
+	if (!idx) return
+
+	return new Promise((resolve, reject) => {
+		db.get(
+			`SELECT * FROM stages WHERE id = ${idx}`,
+			async (err: any, row: stageType) => {
+				if (err) {
+					console.log(err)
+					reject(err)
+					return
+				}
+
+				const games = (await getGames(idx)) as gameType
+				resolve({ stage: row, games })
+				closeDbConnection()
+			}
+		)
+	})
+
 	try {
 		const data = (await getData(idx)) as stageType
 		const games = (await getGames(idx)) as gameType

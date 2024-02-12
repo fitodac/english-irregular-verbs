@@ -7,6 +7,6 @@ const db = new sqlite3.Database(env.DB)
 export const closeDbConnection = () => {
 	db.close((err: any) => {
 		if (err) console.error(err.message)
-		// console.log('Connection closed')
+		// console.log('Connection closed...')
 	})
 }
