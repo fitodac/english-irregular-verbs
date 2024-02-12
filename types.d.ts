@@ -34,7 +34,7 @@ type translationType = {
 type modeType = {
 	id: number
 	sentence?: string
-	options?: translationType[]
+	options?: [translationType]
 	word_id?: number
 }
 
@@ -53,5 +53,5 @@ type translationTranslationType = {
 
 type currentGameType = {
 	game: gameType
-	levels: levelType[]
+	levels: [levelType]
 }
