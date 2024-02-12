@@ -5,10 +5,21 @@ import { gameReset } from '@/actions'
 export async function GET() {
 	await gameReset()
 
-	const checkGameCookie = await cookies().has('irregularVerbsGame')
+	let checkGameCookie = cookies().has('irregularVerbsGame')
+	let checkLevelCookie = cookies().has('irregularVerbsGame')
+
+	if (checkGameCookie) {
+		cookies().delete('irregularVerbsGame')
+		checkGameCookie = false
+	}
+
+	if (checkLevelCookie) {
+		cookies().delete('irregularVerbsLevel')
+		checkLevelCookie = false
+	}
 
 	return Response.json({
 		game: checkGameCookie,
-		level: cookies().has('irregularVerbsLevel'),
+		level: checkLevelCookie,
 	})
 }

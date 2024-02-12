@@ -7,7 +7,3 @@ export async function GET(request: Request) {
 	const resp = ((await getLevel(Number(id))) as getLevelType) ?? {}
 	return Response.json(resp)
 }
-
-export async function POST(request: Request) {
-
-}
