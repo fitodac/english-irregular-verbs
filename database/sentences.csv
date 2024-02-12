@@ -1,2 +1,40 @@
-id,sentence,options,word_id,level_id
-1,I always % a blast hanging out with my friends on the weekends.,have|had,1
+id,sentence,options,word_id
+1,The owner of the pet store % a passion for animals and has created a welcoming environment for pet lovers.,have|has,2
+2,"Customers % been visiting the store regularly, seeking advice on pet care and looking for the perfect companion.",have|has,1
+3,"Recently, the store % received a shipment of exotic birds that have attracted a lot of attention.",have|has,2
+4,"As a result, many families % adopted these colorful birds, bringing vibrant energy to their homes.",have|has,1
+5,One customer has a particular interest in reptiles and % been inquiring about different species available in the store.,have|has,2
+6,"The knowledgeable staff % provided detailed information about various reptiles, helping the customer make an informed decision.",have|has,2
+7,A group of kids % fallen in love with a playful litter of puppies.,have|has,1
+8,Their parents have decided to % a family meeting to discuss adopting one.,have|has,1
+9,The store % organized a pet care workshop where experienced trainers have shared valuable tips on grooming and training furry friends.,have|has,2
+10,Mark % an excellent job managing the team's projects. His dedication is truly remarkable.,do|does,6
+11,% it align with our goals?,do|does,6
+12,"Sarah, what % you think about the new project proposal?",do|does,5
+13,"The team % their best to meet deadlines, and everyone appreciates their collective effort.",do|does,6
+14,"John, could you % me a favor and review these documents before the meeting?",do|does,5
+15,Emily % a fantastic job handling customer inquiries and ensuring client satisfaction.,do|does,6
+16,"What % you think, Mike? ",do|does,5
+17,% this strategy align with the company's vision for the future?,do|does,6
+18,The marketing team % a weekly brainstorming session to generate innovative ideas for upcoming campaigns.,do|does,6
+19,"Andrea, could you % a quick check on the inventory levels? We need to order more supplies.",do|does,5
+20,"James %, ""I heard there's a great new restaurant opening downtown.""",say|says,10
+21,What do you % we check it out?,say|says,9
+22,"Sarah, did you % the meeting is at 3 PM, or does it start earlier?",say|says,9
+23,"As they drive, Mark %, ""I can't believe how much traffic there is today. What do you think, Emma?""",say|says,10
+24,"Emma %, ""I agree, Mark. It's unusually crowded for this time. Let's take a different route.""",say|says,10
+25,"During the journey, Lisa %, ""I read an interesting article about travel destinations.""",say|says,10
+26,What do you % we plan a trip?,say|says,9
+27,"Tom, did you % the concert tickets are still available, or does it sell out quickly?",say|says,9
+28,"The GPS %, ""In 500 meters, make a right turn to reach your destination.""",say|says,10
+29,"Tom %, ""According to the directions, we should take the next right.""",say|says,10
+30,"What do you %, Lisa?",say|says,9
+31,"Every morning, John % to work on his bicycle, enjoying the fresh air and exercise.",go|goes,14
+32,"Sarah, what do you think about taking a shortcut? Does it % through the park?",go|goes,13
+33,"The traffic on the highway % smoothly, allowing for a quick commute today.",go|goes,14
+34,"Tom says, ""I usually % to the gym after work.""",go|goes,13
+35,What do you say we % together sometime?,go|goes,13
+36,"While driving, Lisa % through her to-do list for the day, making sure nothing is forgotten.",go|goes,14
+37,"Mike, did you say the new coffee shop % along our route to the office, or is it in the opposite direction?",go|goes,14
+38,"The GPS % silent as they approach a construction zone, suggesting an alternate route.",go|goes,14
+39,"Emma says, ""I % to the office early to avoid the rush hour traffic. What about you, Mark?""",go|goes,13

@@ -1,3 +1,9 @@
-idx,game_id,pairs_id,sentences_id
-1,1,1,null
-2,1,null,1
+id,idx,game_id,pairs_id,sentences_id
+1,1,1,1,null
+2,2,1,null,1
+3,1,2,2,null
+4,2,2,null,10
+5,1,3,3,null
+6,2,3,null,20
+7,1,4,4,null
+8,2,4,null,31

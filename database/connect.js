@@ -63,11 +63,11 @@ db.serialize(() => {
 
 	fs.createReadStream('levels.csv')
 		.pipe(csv())
-		.on('data', ({ idx, game_id, pairs_id, sentences_id }) => {
+		.on('data', ({ id, idx, game_id, pairs_id, sentences_id }) => {
 			const stmt = db.prepare(
-				'INSERT INTO levels (idx, game_id, pairs_id, sentences_id) VALUES (?, ?, ?, ?)'
+				'INSERT INTO levels (id,idx, game_id, pairs_id, sentences_id) VALUES (?, ?, ?, ?, ?)'
 			)
-			stmt.run(idx, game_id, pairs_id, sentences_id)
+			stmt.run(id, idx, game_id, pairs_id, sentences_id)
 			stmt.finalize()
 		})
 		.on('end', () => {
