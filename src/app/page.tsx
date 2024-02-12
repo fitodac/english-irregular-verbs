@@ -1,18 +1,24 @@
-import { Header, Stage, PlayGround } from '@/components'
+import { Header, Stage, PlayGround, GameCleared } from '@/components'
 import { cookies } from 'next/headers'
 import { env } from '@/config'
 
 export default async function Home() {
-	// const reset = await fetch(`${env.API_PATH}/game/reset`)
-	// console.log('reset:', reset)
+	const gameCookie = cookies().get('irregularVerbsGame')
 
-	const game = cookies().has('irregularVerbsGame')
+	const getGame = await fetch(`${env.API_PATH}/game?id=${gameCookie?.value}`, {
+		next: { tags: ['get-game'] },
+	})
+	const resp = await getGame.json()
+	const cleared = { value: resp.game?.cleared }
 
 	return (
-		<main className="max-w-sm mx-auto px-6">
+		<main className="max-w-sm h-screen mx-auto px-6">
 			<Header />
 			<div className="h-6"></div>
-			{!game ? <Stage /> : <PlayGround />}
+			{cleared.value === 1 && <GameCleared />}
+
+			{cleared.value === 0 && <PlayGround />}
+			{!cleared.value && cleared.value !== 0 && <Stage />}
 		</main>
 	)
 }
