@@ -8,7 +8,7 @@ export const PlayGround = async () => {
 		| undefined
 
 	const getGame = await fetch(`${env.API_PATH}/game?id=${gameID?.value}`)
-	const { game } = await getGame.json()
+	const { game, levels } = await getGame.json()
 
 	// Level
 	const levelID = cookies().get('irregularVerbsLevel') as
@@ -20,7 +20,7 @@ export const PlayGround = async () => {
 	return (
 		<>
 			{level ? (
-				game.levels.length ? (
+				levels.length ? (
 					<>
 						{level && <div className="font-bold">Level {level.idx}</div>}
 
@@ -33,7 +33,11 @@ export const PlayGround = async () => {
 					</div>
 				)
 			) : (
-				<div>Se completaron todos los niveles 🤘</div>
+				<div className="h-1/2 flex justify-center items-center select-none">
+					<div className="text-2xl font-medium text-center  ">
+						Level cleared
+					</div>
+				</div>
 			)}
 		</>
 	)

@@ -1,5 +1,4 @@
 export * from './Header'
-export * from './Buttons'
 export * from './HeaderLives'
 export * from './HeaderCoins'
 export * from './types.models'

@@ -7,8 +7,7 @@ export const Header = async () => {
 	const cookieGame = cookies().get('irregularVerbsGame') as
 		| RequestCookie
 		| undefined
-	const game =
-		cookieGame && ((await getGame(Number(cookieGame.value))) as gameType)
+	const game = (await getGame(Number(cookieGame?.value))) as gameType
 	const { stage } = await getSettings()
 
 	return (
@@ -27,7 +26,6 @@ export const Header = async () => {
 				<div className="flex items-center gap-x-4">
 					<HeaderLives />
 					<HeaderCoins />
-					{/* <Buttons /> */}
 				</div>
 			</div>
 		</aside>

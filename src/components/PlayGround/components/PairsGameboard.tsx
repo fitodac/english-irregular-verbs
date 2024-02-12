@@ -73,7 +73,7 @@ export const PairsGameboard = ({
 								: ''
 						}`}
 						variant={e.enabled ? 'solid' : 'light'}
-						isDisabled={!e.enabled}
+						isDisabled={!e.enabled || selectedWord}
 					>
 						<span className="text-white">{e?.word}</span>
 					</Button>
@@ -94,7 +94,7 @@ export const PairsGameboard = ({
 								: ''
 						}`}
 						variant={e.enabled ? 'solid' : 'light'}
-						isDisabled={!e.enabled}
+						isDisabled={!e.enabled || selectedTranslation}
 					>
 						<span className="text-white">{e?.translation}</span>
 					</Button>
