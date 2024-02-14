@@ -38,3 +38,46 @@ id,sentence,options,word_id
 37,"Mike, did you say the new coffee shop % along our route to the office, or is it in the opposite direction?",go|goes,14
 38,"The GPS % silent as they approach a construction zone, suggesting an alternate route.",go|goes,14
 39,"Emma says, ""I % to the office early to avoid the rush hour traffic. What about you, Mark?""",go|goes,13
+40,"Every weekend, Sarah % groceries for the upcoming week, making a list to ensure she doesn't forget anything.",get|gets,18
+41,"Mike, did you % the fresh produce from the aisle, or does it go in the cart later?",get|gets,17
+42,"As they walk through the aisles, Lisa says, ""I usually % my favorite snacks in this section. What about you, Tom?""",get|gets,17
+43,Tom % a shopping basket,get|gets,18
+44,"""I think we should % some snacks for the movie night tonight.""",get|gets,17
+45,Lisa % a call from her friend,get|gets,18
+46,"""Can you % some milk on your way home?""",get|gets,17
+47,"Mark, did you say the cashier % off at 6 PM, or does the store close earlier?",get|gets,18
+48,"The announcement over the speaker % everyone's attention, saying, ""Attention shoppers, there's a special discount on selected items. Don't miss it!""",get|gets,18
+49,"Emma says, ""Let's % in the checkout line.""",get|gets,17
+50,"""I heard it % long during this time.""",get|gets,18
+51,Captain Jack % a mysterious map in an old bottle washed ashore.,see|sees,22
+52,"""Matey, what do you say we follow this map and % where it leads?""",see|sees,21
+53,"Emma, the first mate, % a distant island on the map.",see|sees,22
+54,"""Captain, it seems the treasure % hidden on that island. Shall we set sail?""",see|sees,22
+55,"As they sail towards the island, Jack % a storm approaching.",see|sees,22
+56,"""Emma, prepare the crew! We need to navigate through this before it % too intense.""",see|sees,22
+57,"Emma % a glimmer of hope, spotting a calm passage.",see|sees,22
+58,"""Captain, I % a safe route. Let's navigate through there to avoid the worst of the storm.""",see|sees,22
+59,"On the island, Jack and Emma % clues pointing to the treasure's location.",see|sees,21
+60,"""These markings % like a guide. Emma, what do you say we follow them?""",see|sees,21
+61,Emma % a cave entrance hidden behind vines.,see|sees,22
+62,"""Captain, the entrance to the treasure cave % right here. Shall we explore it?""",see|sees,22
+63,"Jack sees the glow of the treasure chest in the dark cave. ""Emma, there it is! The treasure % within our grasp. Prepare to load it onto the ship!""",see|sees,22
+64,"As they leave the island, Emma % a ship on the horizon.",see|sees,22
+65,"""Captain, it seems another crew % approaching. What should we do?""",see|sees,22
+66,"Every morning, Sarah % with her team to discuss the day's agenda and upcoming tasks.",speak|speaks,26
+67,"Mike, did you % to the IT department about the software issue, or does it require further investigation?",speak|speaks,25
+68,"As they gather for a meeting, Lisa says, ""I usually % first to provide updates on our progress. What about you, Tom?""",speak|speaks,25
+69,"Tom % up during the meeting, suggesting a new approach to streamline the workflow.",speak|speaks,26
+70,"In the breakroom, Lisa % with her colleagues about the upcoming company event. ""I heard it's going to be exciting. What do you all think?""",speak|speaks,26
+71,"Mark, did you % with the manager about the project deadline extension, or does it need more preparation?",speak|speaks,25
+72,"The boss % during the team meeting, addressing the recent achievements and future goals.",speak|speaks,26
+73,"Emma % privately with a coworker, sharing ideas for the upcoming presentation. ""I think it'll be well-received. What do you say?""",speak|speaks,26
+74,"Lisa decides to % a new TV for her living room and asks the salesperson, ""Can you show me the latest models you have?""",buy|buys,29
+75,The salesperson recommends a high-quality brand that many customers % for its excellent features.,buy|buys,29
+76,"As Lisa explores the options, she says, ""I usually % electronics during sales events. Do you have any upcoming promotions?""",buy|buys,29
+77,"After comparing the specifications, Lisa % the 55-inch smart TV that perfectly fits her requirements.",buy|buys,30
+78,"In the checkout line, Mark speaks with a friend on the phone. ""I'm at the store, and I'm about to % a new TV. What do you think?""",buy|buys,29
+79,"The cashier, who often % gadgets from the store, notices Lisa's choice and says, ""Great pick! I have the same TV at home, and it works wonderfully.""",buy|buys,30
+80,Lisa % an extended warranty to ensure her investment is protected for the long run.,buy|buys,30
+81,"Emma, who frequently % home appliances, sees Lisa at the store and asks",buy|buys,30
+82,"""Are you going to % a sound system to go with that TV?""",buy|buys,29

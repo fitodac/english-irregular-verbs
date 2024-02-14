@@ -25,9 +25,9 @@ db.serialize(() => {
 
 	fs.createReadStream('stages.csv')
 		.pipe(csv())
-		.on('data', ({ idx }) => {
-			const stmt = db.prepare('INSERT INTO stages (idx) VALUES (?)')
-			stmt.run(idx)
+		.on('data', ({ id, idx }) => {
+			const stmt = db.prepare('INSERT INTO stages (id,idx) VALUES (?, ?)')
+			stmt.run(id, idx)
 			stmt.finalize()
 		})
 		.on('end', () => {
