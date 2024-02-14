@@ -11,8 +11,6 @@ export const GameList = ({ games }: { games: [gameType] }) => {
 		setLevel(`${levels[0].id}`)
 	}
 
-	console.log('GAMES', games)
-
 	return (
 		<>
 			<div className="grid grid-cols-2 gap-6 mt-6">

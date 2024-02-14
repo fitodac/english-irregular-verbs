@@ -1,5 +1,6 @@
 import { GameList } from '.'
 import { env } from '@/config'
+import { nextStage } from '@/actions'
 
 export const Stage = async () => {
 	const getSettings = await fetch(`${env.API_PATH}/settings`)
@@ -9,6 +10,13 @@ export const Stage = async () => {
 
 	const getStage = await fetch(`${env.API_PATH}/stage?id=${stageID}`)
 	const { stage, games } = await getStage.json()
+
+	const isStageCleared = games.filter(
+		(e: { cleared: number }): boolean => e.cleared === 0
+	)
+
+	// Si todos los juegos han sido terminados, pasa al siguiente stage:
+	if (!isStageCleared.length) nextStage()
 
 	return (
 		<>
