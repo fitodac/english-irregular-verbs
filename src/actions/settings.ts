@@ -127,3 +127,33 @@ export const coinsAdd = (coins: number) => {
 		)
 	})
 }
+
+export const nextStage = () => {
+	return new Promise((resolve, reject) => {
+		db.get(
+			'SELECT value FROM settings WHERE key = "stage"',
+			(err: any, row: settingsType) => {
+				if (err) {
+					console.log(err)
+					reject(err)
+				}
+
+				const newStageValue = parseInt(row.value) + 1
+
+				db.run(
+					`UPDATE settings SET value = ${newStageValue} WHERE key = "stage"`,
+					(err: any, row: settingsType) => {
+						if (err) {
+							console.log(err)
+							reject(err)
+						}
+
+						resolve(row)
+						closeDbConnection()
+						revalidatePath('/')
+					}
+				)
+			}
+		)
+	})
+}

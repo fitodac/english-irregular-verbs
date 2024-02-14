@@ -1,6 +1,6 @@
 'use server'
 import { cookies } from 'next/headers'
-import { getGame, clearGame, coinsAdd } from '.'
+import { getGame, clearGame, coinsAdd, addLife } from '.'
 
 /**
  * set game
@@ -48,6 +48,7 @@ export const nextLevel = async () => {
 	const lastLevel = await checkForFinalLevel(Number(levelID?.value))
 	if (lastLevel) {
 		await clearGame(Number(gameID?.value))
+		await addLife()
 	} else {
 		cookies().set('irregularVerbsLevel', String(Number(levelID?.value) + 1))
 	}
