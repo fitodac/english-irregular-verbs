@@ -4,7 +4,7 @@ const fs = require('fs')
 const sqlite3 = require('sqlite3').verbose()
 const db = new sqlite3.Database(env.DB)
 import { getLevels, closeDbConnection } from '.'
-import { revalidatePath, revalidateTag } from 'next/cache'
+import { revalidatePath } from 'next/cache'
 import { cookies } from 'next/headers'
 
 export const getGames = (stage_idx: number) => {
@@ -71,10 +71,13 @@ export const clearGame = async (id: number) => {
 }
 
 export const gameReset = () => {
+	cookies().delete('irregularVerbsGame')
+	cookies().delete('irregularVerbsLevel')
+
 	return new Promise(async (resolve, reject) => {
 		db.run(`UPDATE settings SET value = 3 WHERE key = "lives"`)
 		db.run(`UPDATE settings SET value = 0 WHERE key = "coins"`)
-		db.run(`UPDATE games SET cleared = 0 WHERE id IN (1,2,3,4)`)
+		// db.run(`UPDATE games SET cleared = 0 WHERE id IN (1,2,3,4)`)
 
 		resolve(true)
 		closeDbConnection()

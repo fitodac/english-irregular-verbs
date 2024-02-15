@@ -1,5 +1,13 @@
 type settingsType = { [key: string]: string }
 
+type settingsTableType = [
+	{
+		id: number
+		key: string
+		value: string
+	}
+]
+
 type RequestCookie = {
 	key: string
 	value: string

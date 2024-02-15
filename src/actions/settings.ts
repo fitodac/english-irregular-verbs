@@ -3,7 +3,7 @@ import { env } from '@/config'
 const fs = require('fs')
 const sqlite3 = require('sqlite3').verbose()
 const db = new sqlite3.Database(env.DB)
-import { closeDbConnection, settingsTableType } from '.'
+import { closeDbConnection } from '.'
 import { revalidatePath } from 'next/cache'
 
 export const getSettings = async () => {
@@ -69,22 +69,27 @@ export const substractLife = () => {
 
 				const val = parseInt(row.value)
 
-				if (val > 0) {
-					db.run(
-						`UPDATE settings SET value = ? WHERE key = "lives"`,
-						[val - 1],
-						(err: any, row: any) => {
-							if (err) {
-								console.log(err)
-								reject(err)
-							}
+				console.log('VAL', val)
 
-							resolve(row)
-							closeDbConnection()
+				db.run(
+					`UPDATE settings SET value = ? WHERE key = "lives"`,
+					[val - 1],
+					(err: any) => {
+						if (err) {
+							console.log(err)
+							reject(err)
 						}
-					)
-				} else {
+
+						resolve(true)
+						closeDbConnection()
+					}
+				)
+
+				if (val === 1) {
+					console.log('GAME OVER')
 					resolve(val)
+					closeDbConnection()
+					return
 				}
 			}
 		)
