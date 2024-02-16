@@ -2,7 +2,7 @@ import { cookies } from 'next/headers'
 import { GamePairs, GameCompleteSentences } from '.'
 import { env } from '@/config'
 
-export const PlayGround = async () => {
+export const PlayGround = async (): Promise<JSX.Element> => {
 	const gameID = cookies().get('irregularVerbsGame') as
 		| RequestCookie
 		| undefined

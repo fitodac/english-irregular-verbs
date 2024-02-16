@@ -133,6 +133,10 @@ export const coinsAdd = (coins: number) => {
 	})
 }
 
+/**
+ * Next stage
+ * @returns
+ */
 export const nextStage = () => {
 	return new Promise((resolve, reject) => {
 		db.get(
@@ -158,6 +162,39 @@ export const nextStage = () => {
 						revalidatePath('/')
 					}
 				)
+			}
+		)
+	})
+}
+
+/**
+ * Buy one life
+ * @returns
+ */
+export const buyOneLife = () => {
+	return new Promise(async (resolve, reject) => {
+		db.get(
+			'SELECT value FROM settings WHERE key = "coins"',
+			async (err: any, res: { [key: string]: string }) => {
+				if (err) {
+					console.log(err)
+					reject(err)
+				}
+
+				const coins: number = parseInt(res.value)
+
+				if (coins >= 5) {
+					db.run(
+						`UPDATE settings SET value = ? WHERE key = "coins"`,
+						[coins - 5],
+						async () => {
+							await addLife()
+							resolve(true)
+							closeDbConnection()
+							// revalidatePath('/')
+						}
+					)
+				}
 			}
 		)
 	})

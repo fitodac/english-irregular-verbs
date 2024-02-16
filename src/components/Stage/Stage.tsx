@@ -2,7 +2,7 @@ import { GameList } from '.'
 import { env } from '@/config'
 import { nextStage } from '@/actions'
 
-export const Stage = async () => {
+export const Stage = async (): Promise<JSX.Element> => {
 	const getSettings = await fetch(`${env.API_PATH}/settings`)
 	const {
 		settings: { stage: stageID },

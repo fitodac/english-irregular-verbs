@@ -2,7 +2,7 @@ import { cookies } from 'next/headers'
 import { SentencesGameboard as Gameboard } from './components/SentencesGameboard'
 import { env } from '@/config'
 
-export const GameCompleteSentences = async () => {
+export const GameCompleteSentences = async (): Promise<JSX.Element> => {
 	// Level
 	const levelID = cookies().get('irregularVerbsLevel') as
 		| RequestCookie

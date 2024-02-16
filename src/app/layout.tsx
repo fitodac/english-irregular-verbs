@@ -15,7 +15,7 @@ export default function RootLayout({
 	children,
 }: Readonly<{
 	children: React.ReactNode
-}>) {
+}>): JSX.Element {
 	return (
 		<html lang="en" className="bg-slate-900 text-slate-300 antialiased">
 			<body className={`${inter.className}`}>{children}</body>

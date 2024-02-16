@@ -3,7 +3,7 @@ import { env } from '@/config'
 import { Button } from '@nextui-org/react'
 import { gameReset } from '@/actions'
 
-export const GameOver = () => {
+export const GameOver = (): JSX.Element => {
 	const restart = async () => {
 		await gameReset()
 	}

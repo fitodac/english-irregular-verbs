@@ -2,7 +2,7 @@ import { Header, Stage, PlayGround, GameCleared, GameOver } from '@/components'
 import { cookies } from 'next/headers'
 import { getGame, getSettings } from '@/actions'
 
-export default async function Home() {
+export default async function Home(): Promise<JSX.Element> {
 	const gameCookie = cookies().get('irregularVerbsGame')
 
 	const cleared: { value: any } = { value: null }

@@ -5,7 +5,11 @@ import { checkSentenceOption } from '../actions/checkSentenceOption'
 import { setSentencesOrders } from '../actions'
 import { substractLife, nextLevel } from '@/actions'
 
-export const SentencesGameboard = ({ data }: { data: getLevelType }) => {
+export const SentencesGameboard = ({
+	data,
+}: {
+	data: getLevelType
+}): Promise<JSX.Element> => {
 	const sentence = data.game_mode?.sentence
 		? data.game_mode.sentence.replace(/%/g, '_____')
 		: ''

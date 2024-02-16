@@ -6,12 +6,11 @@ import { substractLife, nextLevel } from '@/actions'
 export const PairsGameboard = ({
 	words,
 	translations,
-	level,
 }: {
 	words: [translationWordType]
 	translations: [translationTranslationType]
 	level: number
-}) => {
+}): Promise<JSX.Element> => {
 	const [w, setW] = useState(words)
 	const [t, setT] = useState(translations)
 	const [selectedWord, setSelectedWord] = useState(null) as any

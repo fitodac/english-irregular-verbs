@@ -1,8 +1,4 @@
-import {
-	translationType,
-	translationWordType,
-	translationTranslationType,
-} from '..'
+
 
 const randomOrder = (options: [translationType] | undefined) => {
 	const keys = options && (Object.keys(options) as [string])

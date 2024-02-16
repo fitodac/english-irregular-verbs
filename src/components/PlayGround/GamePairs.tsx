@@ -3,7 +3,7 @@ import { PairsGameboard as Gameboard } from './components/PairsGameboard'
 import { env } from '@/config'
 import { setPairsOrder } from './actions'
 
-export const GamePairs = async () => {
+export const GamePairs = async (): Promise<JSX.Element> => {
 	// Level
 	const levelID = cookies().get('irregularVerbsLevel') as
 		| RequestCookie

@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react'
 import { clearCookies } from '@/actions'
 
-export const GameCleared = () => {
+export const GameCleared = (): JSX.Element => {
 	const [init, setInit] = useState(false)
 
 	useEffect(() => {
