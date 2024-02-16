@@ -1,12 +1,11 @@
 'use client'
 import { Button, Spinner } from '@nextui-org/react'
-import { setGame, setLevel } from '@/actions'
-import { env } from '@/config'
+import { setGame, setLevel, getGame } from '@/actions'
 
 export const GameList = ({ games }: { games: [gameType] }): JSX.Element => {
 	const initGame = async (id: number) => {
-		const getGame = await fetch(`${env.API_PATH}/game?id=${id}`)
-		const { levels } = await getGame.json()
+		const game = (await getGame(id)) as currentGameType
+		const { levels } = game
 		setGame(`${id}`)
 		setLevel(`${levels[0].id}`)
 	}

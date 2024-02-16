@@ -67,7 +67,7 @@ export const getLevels = (game_id: number) => {
 
 export const getLevel = async (id: number) => {
 	try {
-		const data = (await getData(id)) as [levelType]
+		const data = (await getData(id)) as levelType[]
 
 		let game_mode: [any] = [{}]
 

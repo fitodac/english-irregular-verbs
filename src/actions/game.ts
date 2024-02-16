@@ -33,7 +33,7 @@ export const getGame = async (id: number) => {
 	return new Promise((resolve, reject) => {
 		db.get(
 			`SELECT * FROM games WHERE id = ${id}`,
-			async (err: any, game: [gameType]) => {
+			async (err: any, game: gameType[]) => {
 				if (err) {
 					console.log(err)
 					reject(err)

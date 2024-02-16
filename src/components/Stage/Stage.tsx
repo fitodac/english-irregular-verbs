@@ -1,15 +1,10 @@
 import { GameList } from '.'
-import { env } from '@/config'
-import { nextStage } from '@/actions'
+import { nextStage, getSettings, getStage } from '@/actions'
 
 export const Stage = async (): Promise<JSX.Element> => {
-	const getSettings = await fetch(`${env.API_PATH}/settings`)
-	const {
-		settings: { stage: stageID },
-	} = await getSettings.json()
-
-	const getStage = await fetch(`${env.API_PATH}/stage?id=${stageID}`)
-	const { stage, games } = await getStage.json()
+	const settings = (await getSettings()) as { stage: number }
+	const fullStage = (await getStage(settings.stage)) as stageScreenType
+	const { stage, games } = fullStage
 
 	const isStageCleared = games.filter(
 		(e: { cleared: number }): boolean => e.cleared === 0

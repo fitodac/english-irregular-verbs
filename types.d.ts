@@ -8,6 +8,11 @@ type settingsTableType = [
 	}
 ]
 
+type stageType = {
+	id: number
+	idx: number
+}
+
 type RequestCookie = {
 	key: string
 	value: string

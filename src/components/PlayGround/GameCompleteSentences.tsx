@@ -1,14 +1,14 @@
 import { cookies } from 'next/headers'
 import { SentencesGameboard as Gameboard } from './components/SentencesGameboard'
-import { env } from '@/config'
+import { getLevel } from '@/actions'
 
 export const GameCompleteSentences = async (): Promise<JSX.Element> => {
 	// Level
 	const levelID = cookies().get('irregularVerbsLevel') as
 		| RequestCookie
 		| undefined
-	const getLevel = await fetch(`${env.API_PATH}/level?id=${levelID?.value}`)
-	const level = await getLevel.json()
+
+	const level = (await getLevel(Number(levelID?.value))) as getLevelType
 
 	if (!level) return <></>
 

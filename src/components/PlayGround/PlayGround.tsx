@@ -1,21 +1,20 @@
 import { cookies } from 'next/headers'
 import { GamePairs, GameCompleteSentences } from '.'
-import { env } from '@/config'
+import { getGame, getLevel } from '@/actions'
 
 export const PlayGround = async (): Promise<JSX.Element> => {
 	const gameID = cookies().get('irregularVerbsGame') as
 		| RequestCookie
 		| undefined
-
-	const getGame = await fetch(`${env.API_PATH}/game?id=${gameID?.value}`)
-	const { game, levels } = await getGame.json()
-
-	// Level
 	const levelID = cookies().get('irregularVerbsLevel') as
 		| RequestCookie
 		| undefined
-	const getLevel = await fetch(`${env.API_PATH}/level?id=${levelID?.value}`)
-	const { level } = await getLevel.json()
+
+	const GAME = (await getGame(Number(gameID?.value))) as currentGameType
+	const { levels } = GAME
+
+	const LEVEL = (await getLevel(Number(levelID?.value))) as getLevelType
+	const { level } = LEVEL
 
 	return (
 		<>

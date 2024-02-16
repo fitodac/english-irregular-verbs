@@ -1,9 +1,4 @@
-export type stageType = [
-	{
-		id: number
-		idx: number
-	}
-]
+
 
 
 
