@@ -8,76 +8,166 @@ id,sentence,options,word_id
 7,A group of kids % fallen in love with a playful litter of puppies.,have|has,1
 8,Their parents have decided to % a family meeting to discuss adopting one.,have|has,1
 9,The store % organized a pet care workshop where experienced trainers have shared valuable tips on grooming and training furry friends.,have|has,2
-10,Mark % an excellent job managing the team's projects. His dedication is truly remarkable.,do|does,6
-11,% it align with our goals?,do|does,6
-12,"Sarah, what % you think about the new project proposal?",do|does,5
-13,"The team % their best to meet deadlines, and everyone appreciates their collective effort.",do|does,6
-14,"John, could you % me a favor and review these documents before the meeting?",do|does,5
-15,Emily % a fantastic job handling customer inquiries and ensuring client satisfaction.,do|does,6
-16,"What % you think, Mike? ",do|does,5
-17,% this strategy align with the company's vision for the future?,do|does,6
-18,The marketing team % a weekly brainstorming session to generate innovative ideas for upcoming campaigns.,do|does,6
-19,"Andrea, could you % a quick check on the inventory levels? We need to order more supplies.",do|does,5
-20,"James %, ""I heard there's a great new restaurant opening downtown.""",say|says,10
-21,What do you % we check it out?,say|says,9
-22,"Sarah, did you % the meeting is at 3 PM, or does it start earlier?",say|says,9
-23,"As they drive, Mark %, ""I can't believe how much traffic there is today. What do you think, Emma?""",say|says,10
-24,"Emma %, ""I agree, Mark. It's unusually crowded for this time. Let's take a different route.""",say|says,10
-25,"During the journey, Lisa %, ""I read an interesting article about travel destinations.""",say|says,10
-26,What do you % we plan a trip?,say|says,9
-27,"Tom, did you % the concert tickets are still available, or does it sell out quickly?",say|says,9
-28,"The GPS %, ""In 500 meters, make a right turn to reach your destination.""",say|says,10
-29,"Tom %, ""According to the directions, we should take the next right.""",say|says,10
-30,"What do you %, Lisa?",say|says,9
-31,"Every morning, John % to work on his bicycle, enjoying the fresh air and exercise.",go|goes,14
-32,"Sarah, what do you think about taking a shortcut? Does it % through the park?",go|goes,13
-33,"The traffic on the highway % smoothly, allowing for a quick commute today.",go|goes,14
-34,"Tom says, ""I usually % to the gym after work.""",go|goes,13
-35,What do you say we % together sometime?,go|goes,13
-36,"While driving, Lisa % through her to-do list for the day, making sure nothing is forgotten.",go|goes,14
-37,"Mike, did you say the new coffee shop % along our route to the office, or is it in the opposite direction?",go|goes,14
-38,"The GPS % silent as they approach a construction zone, suggesting an alternate route.",go|goes,14
-39,"Emma says, ""I % to the office early to avoid the rush hour traffic. What about you, Mark?""",go|goes,13
-40,"Every weekend, Sarah % groceries for the upcoming week, making a list to ensure she doesn't forget anything.",get|gets,18
-41,"Mike, did you % the fresh produce from the aisle, or does it go in the cart later?",get|gets,17
-42,"As they walk through the aisles, Lisa says, ""I usually % my favorite snacks in this section. What about you, Tom?""",get|gets,17
-43,Tom % a shopping basket,get|gets,18
-44,"""I think we should % some snacks for the movie night tonight.""",get|gets,17
-45,Lisa % a call from her friend,get|gets,18
-46,"""Can you % some milk on your way home?""",get|gets,17
-47,"Mark, did you say the cashier % off at 6 PM, or does the store close earlier?",get|gets,18
-48,"The announcement over the speaker % everyone's attention, saying, ""Attention shoppers, there's a special discount on selected items. Don't miss it!""",get|gets,18
-49,"Emma says, ""Let's % in the checkout line.""",get|gets,17
-50,"""I heard it % long during this time.""",get|gets,18
-51,Captain Jack % a mysterious map in an old bottle washed ashore.,see|sees,22
-52,"""Matey, what do you say we follow this map and % where it leads?""",see|sees,21
-53,"Emma, the first mate, % a distant island on the map.",see|sees,22
-54,"""Captain, it seems the treasure % hidden on that island. Shall we set sail?""",see|sees,22
-55,"As they sail towards the island, Jack % a storm approaching.",see|sees,22
-56,"""Emma, prepare the crew! We need to navigate through this before it % too intense.""",see|sees,22
-57,"Emma % a glimmer of hope, spotting a calm passage.",see|sees,22
-58,"""Captain, I % a safe route. Let's navigate through there to avoid the worst of the storm.""",see|sees,22
-59,"On the island, Jack and Emma % clues pointing to the treasure's location.",see|sees,21
-60,"""These markings % like a guide. Emma, what do you say we follow them?""",see|sees,21
-61,Emma % a cave entrance hidden behind vines.,see|sees,22
-62,"""Captain, the entrance to the treasure cave % right here. Shall we explore it?""",see|sees,22
-63,"Jack sees the glow of the treasure chest in the dark cave. ""Emma, there it is! The treasure % within our grasp. Prepare to load it onto the ship!""",see|sees,22
-64,"As they leave the island, Emma % a ship on the horizon.",see|sees,22
-65,"""Captain, it seems another crew % approaching. What should we do?""",see|sees,22
-66,"Every morning, Sarah % with her team to discuss the day's agenda and upcoming tasks.",speak|speaks,26
-67,"Mike, did you % to the IT department about the software issue, or does it require further investigation?",speak|speaks,25
-68,"As they gather for a meeting, Lisa says, ""I usually % first to provide updates on our progress. What about you, Tom?""",speak|speaks,25
-69,"Tom % up during the meeting, suggesting a new approach to streamline the workflow.",speak|speaks,26
-70,"In the breakroom, Lisa % with her colleagues about the upcoming company event. ""I heard it's going to be exciting. What do you all think?""",speak|speaks,26
-71,"Mark, did you % with the manager about the project deadline extension, or does it need more preparation?",speak|speaks,25
-72,"The boss % during the team meeting, addressing the recent achievements and future goals.",speak|speaks,26
-73,"Emma % privately with a coworker, sharing ideas for the upcoming presentation. ""I think it'll be well-received. What do you say?""",speak|speaks,26
-74,"Lisa decides to % a new TV for her living room and asks the salesperson, ""Can you show me the latest models you have?""",buy|buys,29
-75,The salesperson recommends a high-quality brand that many customers % for its excellent features.,buy|buys,29
-76,"As Lisa explores the options, she says, ""I usually % electronics during sales events. Do you have any upcoming promotions?""",buy|buys,29
-77,"After comparing the specifications, Lisa % the 55-inch smart TV that perfectly fits her requirements.",buy|buys,30
-78,"In the checkout line, Mark speaks with a friend on the phone. ""I'm at the store, and I'm about to % a new TV. What do you think?""",buy|buys,29
-79,"The cashier, who often % gadgets from the store, notices Lisa's choice and says, ""Great pick! I have the same TV at home, and it works wonderfully.""",buy|buys,30
-80,Lisa % an extended warranty to ensure her investment is protected for the long run.,buy|buys,30
-81,"Emma, who frequently % home appliances, sees Lisa at the store and asks",buy|buys,30
-82,"""Are you going to % a sound system to go with that TV?""",buy|buys,29
+10,I have a shopping list with all the ingredients for tonight's dinner.,have|has|having,1
+11,He has a cart filled with fresh vegetables and meat.,have|has|having,2
+12,I have a coupon for a discount on cereal.,have|has|having,1
+13,He has already paid for his groceries.,have|has|having,2
+14,I'm having trouble finding the pasta aisle. Can you help me?,have|has|having,3
+15,"Sure, I have some extra coupons if you need them.",have|has|having,1
+16,The cashier is having a busy day today.,have|has|having,3
+17,"I have a loyalty card, so I'll be saving some money on this purchase.",have|has|having,1
+18,I'm having a great time discovering new products.,have|has|having,3
+19,She has received a complimentary gift for being a loyal customer.,have|has|having,2
+20,I have been researching different car models for weeks.,have|has|having|had,
+21,The new model has impressive fuel efficiency ratings.,have|has|having|had,
+22,I'm having difficulty deciding between the red and blue cars.,have|has|having|had,
+23,Having a test drive will help you make a better decision.,have|has|having|had,
+24,"Last year, I had a compact car, but it was time for an upgrade.",have|has|having|had,
+25,The dealership had a special offer that made the decision easier.,have|has|having|had,
+26,I had a great experience with the sales team.,have|has|having|had,
+27,We have a financing option that suits your budget.,have|has|having|had,
+28,"After having a thorough inspection, I decided to go with the blue car.",have|has|having|had,
+29,Congratulations! You've had an excellent choice.,have|has|having|had,
+30,Mark % an excellent job managing the team's projects. His dedication is truly remarkable.,do|does,6
+31,% it align with our goals?,do|does,6
+32,"Sarah, what % you think about the new project proposal?",do|does,5
+33,"The team % their best to meet deadlines, and everyone appreciates their collective effort.",do|does,6
+34,"John, could you % me a favor and review these documents before the meeting?",do|does,5
+35,Emily % a fantastic job handling customer inquiries and ensuring client satisfaction.,do|does,6
+36,"What % you think, Mike? ",do|does,5
+37,% this strategy align with the company's vision for the future?,do|does,6
+38,The marketing team % a weekly brainstorming session to generate innovative ideas for upcoming campaigns.,do|does,6
+39,"Andrea, could you % a quick check on the inventory levels? We need to order more supplies.",do|does,5
+40,I do most of the coding for our projects.,do|does|doing,
+41,He does an excellent job managing the team.,do|does|doing,
+42,I'm doing some research on the latest software updates.,do|does|doing,
+43,He does stay updated on industry trends.,do|does|doing,
+44,I'm doing my best to meet the project deadline.,do|does|doing,
+45,"He does handle pressure well, always delivering quality work.",do|does|doing,
+46,I do appreciate your support during crunch time.,do|does|doing,
+47,He does contribute significantly to the success of our projects.,do|does|doing,
+48,I do regular maintenance on the space station's engines.,do|does|doing|done,
+49,He does focus on ensuring the systems are functioning optimally.,do|does|doing|done,
+50,We're doing a thorough check for any signs of wear and tear.,do|does|doing|done,
+51,He does identify potential issues before they become serious.,do|does|doing|done,
+52,I'm doing some adjustments to the communication antennas.,do|does|doing|done,
+53,He does handle the technical aspects of the repairs seamlessly.,do|does|doing|done,
+54,We've done a complete overhaul of the navigation system.,do|does|doing|done,
+55,He does work diligently to keep the station in top-notch condition.,do|does|doing|done,
+56,Customer: I do my grocery shopping every week.,do|does|doing|done|did,
+57,Cashier: She does prefer using reusable bags for her purchases.,do|does|doing|done|did,
+58,Customer: I'm doing a quick check to make sure I got everything.,do|does|doing|done|did,
+59,Cashier: He does appreciate customers who are thorough.,do|does|doing|done|did,
+60,Customer: I've done most of my shopping in the fresh produce section.,do|does|doing|done|did,
+61,Cashier: She does enjoy a healthy selection of fruits and vegetables.,do|does|doing|done|did,
+62,Customer: I'm doing my best to remember my loyalty card this time.,do|does|doing|done|did,
+63,Cashier: He does encourage customers to take advantage of discounts.,do|does|doing|done|did,
+64,Customer: I did find a great deal on the discount shelf.,do|does|doing|done|did,
+65,Cashier: She does make smart choices to save on groceries.,do|does|doing|done|did,
+66,"James %, ""I heard there's a great new restaurant opening downtown.""",say|says,10
+67,What do you % we check it out?,say|says,9
+68,"Sarah, did you % the meeting is at 3 PM, or does it start earlier?",say|says,9
+69,"As they drive, Mark %, ""I can't believe how much traffic there is today. What do you think, Emma?""",say|says,10
+70,"Emma %, ""I agree, Mark. It's unusually crowded for this time. Let's take a different route.""",say|says,10
+71,"During the journey, Lisa %, ""I read an interesting article about travel destinations.""",say|says,10
+72,What do you % we plan a trip?,say|says,9
+73,"Tom, did you % the concert tickets are still available, or does it sell out quickly?",say|says,9
+74,"The GPS %, ""In 500 meters, make a right turn to reach your destination.""",say|says,10
+75,"Tom %, ""According to the directions, we should take the next right.""",say|says,10
+76,"What do you %, Lisa?",say|says,9
+77,John says he's excited about the upcoming project.,say|says|saying,
+78,Mary says she agrees and suggests a creative approach.,say|says|saying,
+79,John says he's been thinking about incorporating innovative technologies.,say|says|saying,
+80,Mary is saying she believes it could significantly improve efficiency.,say|says|saying,
+81,John is saying he appreciates her perspective and wants to explore it further.,say|says|saying,
+82,Mary says she's looking forward to collaborating on this.,say|says|saying,
+83,John says he'll set up a meeting to discuss the details.,say|says|saying,
+84,Mary is saying she'll prepare a presentation for the team.,say|says|saying,
+85,"The cashier says, ""Your total is $35.50.""",say|says|saying|said,
+86,"The customer said, ""I think there's a mistake. The tag on the shelf says it's on sale.""",say|says|saying|said,
+87,"Politely, the cashier says, ""Let me check that for you.""",say|says|saying|said,
+88,"After checking, the cashier said, ""You're right; it's indeed on sale. Your new total is $28.00.""",say|says|saying|said,
+89,"Gratefully, the customer says, ""Thank you for clarifying that.""",say|says|saying|said,
+90,"Meanwhile, another customer is saying, ""Excuse me, where can I find the organic fruits?""",say|says|saying|said,
+91,"The cashier says, ""Aisle 3, right next to the fresh produce section.""",say|says|saying|said,
+92,"A nearby employee, saying, ""Let me guide you there; I'll show you the way.""",say|says|saying|said,
+93,"In the future, he says, ""I will have a high-tech gadget that can do amazing things.""",have|has|having|had|say|says|saying|said,
+94,"His friend, saying, ""That sounds incredible! What features does it have?""",have|has|having|had|say|says|saying|said,
+95,"He replies, ""It has voice recognition, artificial intelligence, and even a teleportation option.""",have|has|having|had|say|says|saying|said,
+96,"Intrigued, the friend says, ""I've never heard of such a device. Where did you get it?""",have|has|having|had|say|says|saying|said,
+97,"He said, ""I had it custom-made by a futuristic tech company.""",have|has|having|had|say|says|saying|said,
+98,"The friend says, ""I have to get one for myself!""",have|has|having|had|say|says|saying|said,
+99,"Later, they are saying, ""Let's test its teleportation feature and go to a future concert together.""",have|has|having|had|say|says|saying|said,
+100,"Excitedly, he says, ""I've always wanted to experience a concert in the future.""",have|has|having|had|say|says|saying|said,
+101,"They have an unforgettable time at the concert, enjoying music from artists they've never heard before.",have|has|having|had|say|says|saying|said,
+102,"Reflecting on the experience, the friend says, ""This has been the best futuristic adventure ever!""",have|has|having|had|say|says|saying|said,
+103,"As the train arrives, he says, ""I did not expect it to be on time.""",do|does|done|did|say|says|saying|said,
+104,"She responds, ""Trains here usually do arrive promptly.""",do|does|done|did|say|says|saying|said,
+105,"Checking the schedule, he says, ""It says the next one is at 3 PM.""",do|does|done|did|say|says|saying|said,
+106,"She nods, saying, ""That gives us some time to grab a snack.""",do|does|done|did|say|says|saying|said,
+107,They decide to do some shopping at the station's convenience store.,do|does|done|did|say|says|saying|said,
+108,"Entering the store, she says, ""I've never done shopping here before.""",do|does|done|did|say|says|saying|said,
+109,"He replies, ""It does have a surprisingly good selection.""",do|does|done|did|say|says|saying|said,
+110,"After shopping, they find comfortable seats and discuss what they've done during the day.",do|does|done|did|say|says|saying|said,
+111,"The station announcement says, ""Train to Central City departing from platform 2.""",do|does|done|did|say|says|saying|said,
+112,"They gather their bags and head towards the platform, excited for the journey ahead.",do|does|done|did|say|says|saying|said,
+117,"Every morning, John % to work on his bicycle, enjoying the fresh air and exercise.",go|goes,14
+118,"Sarah, what do you think about taking a shortcut? Does it % through the park?",go|goes,13
+119,"The traffic on the highway % smoothly, allowing for a quick commute today.",go|goes,14
+120,"Tom says, ""I usually % to the gym after work.""",go|goes,13
+121,What do you say we % together sometime?,go|goes,13
+122,"While driving, Lisa % through her to-do list for the day, making sure nothing is forgotten.",go|goes,14
+123,"Mike, did you say the new coffee shop % along our route to the office, or is it in the opposite direction?",go|goes,14
+124,"The GPS % silent as they approach a construction zone, suggesting an alternate route.",go|goes,14
+125,"Emma says, ""I % to the office early to avoid the rush hour traffic. What about you, Mark?""",go|goes,13
+126,,,
+127,,,
+128,,,
+129,,,
+130,,,
+131,,,
+132,,,
+133,,,
+134,"Every weekend, Sarah % groceries for the upcoming week, making a list to ensure she doesn't forget anything.",get|gets,18
+135,"Mike, did you % the fresh produce from the aisle, or does it go in the cart later?",get|gets,17
+136,"As they walk through the aisles, Lisa says, ""I usually % my favorite snacks in this section. What about you, Tom?""",get|gets,17
+137,Tom % a shopping basket,get|gets,18
+138,"""I think we should % some snacks for the movie night tonight.""",get|gets,17
+139,Lisa % a call from her friend,get|gets,18
+140,"""Can you % some milk on your way home?""",get|gets,17
+141,"Mark, did you say the cashier % off at 6 PM, or does the store close earlier?",get|gets,18
+142,"The announcement over the speaker % everyone's attention, saying, ""Attention shoppers, there's a special discount on selected items. Don't miss it!""",get|gets,18
+143,"Emma says, ""Let's % in the checkout line.""",get|gets,17
+144,"""I heard it % long during this time.""",get|gets,18
+145,Captain Jack % a mysterious map in an old bottle washed ashore.,see|sees,22
+146,"""Matey, what do you say we follow this map and % where it leads?""",see|sees,21
+147,"Emma, the first mate, % a distant island on the map.",see|sees,22
+148,"""Captain, it seems the treasure % hidden on that island. Shall we set sail?""",see|sees,22
+149,"As they sail towards the island, Jack % a storm approaching.",see|sees,22
+150,"""Emma, prepare the crew! We need to navigate through this before it % too intense.""",see|sees,22
+151,"Emma % a glimmer of hope, spotting a calm passage.",see|sees,22
+152,"""Captain, I % a safe route. Let's navigate through there to avoid the worst of the storm.""",see|sees,22
+153,"On the island, Jack and Emma % clues pointing to the treasure's location.",see|sees,21
+154,"""These markings % like a guide. Emma, what do you say we follow them?""",see|sees,21
+155,Emma % a cave entrance hidden behind vines.,see|sees,22
+156,"""Captain, the entrance to the treasure cave % right here. Shall we explore it?""",see|sees,22
+157,"Jack sees the glow of the treasure chest in the dark cave. ""Emma, there it is! The treasure % within our grasp. Prepare to load it onto the ship!""",see|sees,22
+158,"As they leave the island, Emma % a ship on the horizon.",see|sees,22
+159,"""Captain, it seems another crew % approaching. What should we do?""",see|sees,22
+160,"Every morning, Sarah % with her team to discuss the day's agenda and upcoming tasks.",speak|speaks,26
+161,"Mike, did you % to the IT department about the software issue, or does it require further investigation?",speak|speaks,25
+162,"As they gather for a meeting, Lisa says, ""I usually % first to provide updates on our progress. What about you, Tom?""",speak|speaks,25
+163,"Tom % up during the meeting, suggesting a new approach to streamline the workflow.",speak|speaks,26
+164,"In the breakroom, Lisa % with her colleagues about the upcoming company event. ""I heard it's going to be exciting. What do you all think?""",speak|speaks,26
+165,"Mark, did you % with the manager about the project deadline extension, or does it need more preparation?",speak|speaks,25
+166,"The boss % during the team meeting, addressing the recent achievements and future goals.",speak|speaks,26
+167,"Emma % privately with a coworker, sharing ideas for the upcoming presentation. ""I think it'll be well-received. What do you say?""",speak|speaks,26
+168,"Lisa decides to % a new TV for her living room and asks the salesperson, ""Can you show me the latest models you have?""",buy|buys,29
+169,The salesperson recommends a high-quality brand that many customers % for its excellent features.,buy|buys,29
+170,"As Lisa explores the options, she says, ""I usually % electronics during sales events. Do you have any upcoming promotions?""",buy|buys,29
+171,"After comparing the specifications, Lisa % the 55-inch smart TV that perfectly fits her requirements.",buy|buys,30
+172,"In the checkout line, Mark speaks with a friend on the phone. ""I'm at the store, and I'm about to % a new TV. What do you think?""",buy|buys,29
+173,"The cashier, who often % gadgets from the store, notices Lisa's choice and says, ""Great pick! I have the same TV at home, and it works wonderfully.""",buy|buys,30
+174,Lisa % an extended warranty to ensure her investment is protected for the long run.,buy|buys,30
+175,"Emma, who frequently % home appliances, sees Lisa at the store and asks",buy|buys,30
+176,"""Are you going to % a sound system to go with that TV?""",buy|buys,29
